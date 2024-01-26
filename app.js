@@ -33,16 +33,6 @@ const getComputerChoice = () => {
     else {return SCISSORS;}
 }
 
-// const getWinner = function(cChoice, pChoice){
-//     if (cChoice === pChoice){ return RESULT_DRAW; }
-//     else if (
-//         cChoice === ROCK && pChoice === PAPER || 
-//         cChoice === PAPER && pChoice === SCISSORS ||
-//         cChoice === SCISSORS && pChoice === ROCK
-//     ){return PLAYER_WINS}
-//     else {return COMPUTER_WINS}
-// }
-
 const getWinner = (cChoice, pChoice) => {
     cChoice === pChoice ? RESULT_DRAW : 
     cChoice === ROCK && pChoice === PAPER || 
@@ -58,7 +48,10 @@ startGameBtn.addEventListener("click", function(){
     const playerChoice = getPlayerChoice();
     const computerChoice = getComputerChoice();
     const winner = getWinner(computerChoice, playerChoice);
-    console.log(playerChoice, computerChoice, winner);
+    let message = `Player chose: ${playerChoice}, Computer chose: ${computerChoice}, Results: ${winner}`;
+    alert(message);
+    gameIsRunning = false;
+    console.log(`Player chose: ${playerChoice}, Computer chose: ${computerChoice}, Results: ${winner}`);
 });
 
 //Restart section 131, prompt isn't working. Then push.
