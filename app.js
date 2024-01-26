@@ -40,12 +40,7 @@ const getWinner = function(cChoice, pChoice){
         cChoice === PAPER && pChoice === SCISSORS ||
         cChoice === SCISSORS && pChoice === ROCK
     ){return PLAYER_WINS}
-    else if (
-        pChoice === ROCK && cChoice === PAPER || 
-        pChoice === PAPER && cChoice === SCISSORS ||
-        pChoice === SCISSORS && cChoice === ROCK
-    ){return COMPUTER_WINS}
-    else {return RESULT_DRAW}
+    else {return COMPUTER_WINS}
 }
 
 startGameBtn.addEventListener("click", function(){
