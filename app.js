@@ -43,7 +43,7 @@ const getWinner = (cChoice, pChoice = DEFAULT_USER_CHOICE ) =>
       : COMPUTER_WINS;
 
 
-startGameBtn.addEventListener("click", function(){
+startGameBtn.addEventListener("click", () => {
     if (gameIsRunning){return;}
     gameIsRunning = true;
     console.log("Game is starting...");
@@ -55,4 +55,3 @@ startGameBtn.addEventListener("click", function(){
     gameIsRunning = false;
     console.log(`Player chose: ${playerChoice}, Computer chose: ${computerChoice}, Results: ${winner}`);
 });
-
