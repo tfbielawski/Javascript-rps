@@ -56,4 +56,3 @@ startGameBtn.addEventListener("click", function(){
     console.log(`Player chose: ${playerChoice}, Computer chose: ${computerChoice}, Results: ${winner}`);
 });
 
-//Restart section 131, prompt isn't working. Then push.
